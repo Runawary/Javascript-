@@ -60,28 +60,14 @@
 	
 	  next.onclick = function ()
 	  {
-	    if (index == 5)
-	    {
-	       index = 1;
-	    }
-	    else
-	    {
-	       index +=1;
-	    }
+	    index==5?index=1 : index+=1;
 	    showTab();
 	    animate(-500);
 	  }
 	  
 	  prev.onclick = function ()
 	  {
-            if (index == 1)
-	    {
-	       index = 5;
-	    }
-	    else
-	    {
-	       index -=1;
-	    }
+            index==1?index=5 : index-=1;
 	    showTab();
 	    animate(+500);
 	  }
