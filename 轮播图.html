@@ -17,7 +17,75 @@
 		#button .on{background:yellow;}
 	</style>
 	<script type="text/javascript">
-		// Javascript start
+	// Javascript start
+	window.onload = function ()
+	{
+	  var container = document.getElementById('container');
+	  var list = document.getElementById('list');
+	  var buttons = document.getElementById('button').getElementsByTagName('div');
+	  var index = 1;
+	  var next = document.getElementById('next');
+	  var prev = document.getElementById('prev');
+		
+	  function showTab ()
+	  {
+	    
+	    for (var i = 0; i < buttons.length; i ++)
+	    {
+	      if (buttons[i].className = 'on')
+	      {
+	        buttons[i].className = '';
+	      }
+	      
+	      buttons[index - 1].className = 'on';
+	     }	
+          }
+		
+	  // defined next, prev public style
+	  function animate (offset)
+	  {
+	    var newLeft = parseInt(list.style.left) + offset;
+	    list.style.left = newLeft + 'px';
+		  
+	    if (newLeft > -500)
+	    {
+	      list.style.left = -2500 + 'px';
+	    }
+
+	    if (newLeft < -2500)
+	    {
+	      list.style.left = -500 + 'px';
+	    }
+	  }
+	
+	  next.onclick = function ()
+	  {
+	    if (index == 5)
+	    {
+	       index = 1;
+	    }
+	    else
+	    {
+	       index +=1;
+	    }
+	    showTab();
+	    animate(-500);
+	  }
+	  
+	  prev.onclick = function ()
+	  {
+            if (index == 1)
+	    {
+	       index = 5;
+	    }
+	    else
+	    {
+	       index -=1;
+	    }
+	    showTab();
+	    animate(+500);
+	  }
+	}
 	</script>
 </head>
 <body>
