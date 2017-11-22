@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Title the document</title>
+	<style type="text/css">
+		*{margin:0px;padding:0px;}
+		#container{height:330px;width:500px;position:relative;overflow:hidden;border:3px solid #ccc;margin:0 auto;}
+		#list{width:3500px;height:310px;position:absolute;}
+		#list img{height:310px;width:500px;float:right;}
+		#submit{position:absolute;top:150px;width:500px;color:red;z-index:999;}
+		#submit a{font-size:25px;font-weight:800;color:#ccc;opacity:0.3;text-decoration:none;}
+		#container:hover a{opacity:0.8;}
+		#next{float:right;}
+		#button{position:absolute;top:315px;left:220px;}
+		#button div{height:10px;width:10px;border-radius:50%;border:1px solid #ccc;float:left;}
+		#button .on{background:yellow;}
+	</style>
+	<script type="text/javascript">
+		// Javascript start
+	</script>
+</head>
+<body>
+<div id="container">
+	<div id="list" style="left:-500px;">
+		<img src="http://g.hiphotos.baidu.com/image/pic/item/80cb39dbb6fd5266be536df2a118972bd50736df.jpg" alt="5">
+		<img src="http://d.hiphotos.baidu.com/image/pic/item/a8773912b31bb0513bbcb8e93f7adab44bede053.jpg" alt="1">
+		<img src="http://a.hiphotos.baidu.com/image/pic/item/95eef01f3a292df550d847d5b5315c6035a873d3.jpg" alt="2">
+		<img src="http://b.hiphotos.baidu.com/image/pic/item/cc11728b4710b9128942bd3ecafdfc039345226a.jpg" alt="3">
+		<img src="http://e.hiphotos.baidu.com/image/crop%3D0%2C0%2C640%2C460/sign=9f796bb105b30f2421d5b643f5a5fd73/962bd40735fae6cd9f796bb105b30f2443a70f15.jpg" alt="4">
+		<img src="http://g.hiphotos.baidu.com/image/pic/item/80cb39dbb6fd5266be536df2a118972bd50736df.jpg" alt="5">
+		<img src="http://d.hiphotos.baidu.com/image/pic/item/a8773912b31bb0513bbcb8e93f7adab44bede053.jpg" alt="1">
+	</div>
+	<div id="submit">
+		<a href="javascript:;" id="prev"><<</a>
+		<a href="javascript:;" id="next">>></a>
+	</div>
+	<div id="button">
+		<div class="on"></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+	</div>
+</div>
+</body>
+</html>
